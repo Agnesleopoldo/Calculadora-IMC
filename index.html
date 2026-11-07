@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css">
+</head>
+<body>
+    <main id="container">
+        <section id="img">
+            <img src="./img/personal trainer.svg" alt="mulher se exercitando">
+        </section>
+
+        <section id="calculadora">
+            <form id="form">
+                <h1 id="titulo">Calculadora - IMC</h1>
+
+                
+                <div class="input-box">
+                    <label for="idade">Idade:</label>
+                    <div class="input-field">
+                        <i class="fa-solid fa-calendar"></i>
+                        <input type="radio" id="idade" name="idade" value="menor" required>
+                        <label for="menor">Criança</label>
+                        <input type="radio" id="adulto" name="idade" value="adulto" required>
+                        <label for="adulto">Adulto</label>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="sexo">Sexo:</label>
+                    <div class="input-field">
+                        <i class="fa-solid fa-venus-mars"></i>
+                        <input type="radio" id="sexo" name="sexo" value="masculino" required>
+                        <label for="masculino">Masculino</label>
+                        <input type="radio" id="feminino" name="sexo" value="feminino" required>
+                        <label for="feminino">Feminino</label>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="peso">Peso (kg):</label>
+                    <div class="input-field">
+                        <i class="fa-solid fa-weight-hanging"></i>
+                        <input type="number" id="peso" placeholder="Ex: 70" step="any" name="peso" required>
+                        <span>
+                            Kg
+                        </span>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <label for="altura">Altura (m):</label>
+                    <div class="input-field">
+                        <i class="fa-solid fa-ruler"></i>
+                        <input type="number" id="altura" placeholder="Ex: 1.75" step="any" name="altura" required>
+                        <span>
+                            m
+                        </span>
+                    </div>
+                </div>
+
+                <button id="calcular" type="submit" >Calcular IMC</button>
+            </form>
+
+            <div id="infos" class="hidden">
+                <div id="resultado">
+                    <div id="imc">
+                        <span id="valor"></span>
+                        <span>Seu IMC</span>
+                    </div>
+                    <div id="descricao">
+                        <span></span>
+                    </div>
+                </div>
+                <div id="more-info">
+                    <a href="https://mundoeducacao.uol.com.br/saude-bem-estar/imc.htm">Mais informações sobre o IMC
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
